@@ -1,0 +1,16 @@
+<footer class="footer">
+  <small>
+   <%= t("layouts.footer.message_small_html",
+     href1: link_to(t("layouts.footer.rails_tutorial"),
+     t("layouts.footer.link_rails_tutorial")),
+     href2: link_to(t("layouts.footer.michael_hartl"),
+     t("layouts.footer.link_michael_hartl"))) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("layouts.footer.about"), about_path %></li>
+      <li><%= link_to t("layouts.footer.contact"), contact_path %></li>
+      <li><%= link_to t("layouts.footer.news"), t(".link_news") %></li>
+    </ul>
+  </nav>
+</footer>
