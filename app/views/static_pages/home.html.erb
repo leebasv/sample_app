@@ -1,5 +1,11 @@
-<% provide :title, t("title") %>
-<h1><%= t(".title") %></h1>
-<p>
-  <%= t(".message_home_html", href: link_to(t(".detail"), t(".link"))) %>
-</p>
+<div class="center jumbotron">
+  <h1><%= t("layouts.application.wc_title") %></h1>
+  <h2>
+    <%= t(".message_home_html",
+    href: link_to(t(".detail"), t(".link"))) %>
+  </h2>
+  <%= link_to t(".sign_up_now"), signup_path, class: "btn btn-lg
+  tn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: t(".logo_detail")),
+"http://rubyonrails.org/" %>

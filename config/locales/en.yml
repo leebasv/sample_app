@@ -2,6 +2,22 @@ en:
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
+      wc_title: "Welcome to the Sample App"
+    header:
+      home: "Home"
+      help: "Help"
+      log_in: "Log in"
+      sample_app: "sample app"
+    footer:
+      message_small_html: " The %{href1} by %{href2}"
+      rails_tutorial: "Ruby on Rails Tutorial"
+      link_rails_tutorial: "http://www.railstutorial.org/"
+      michael_hartl: "Michael Hartl"
+      link_michael_hartl: "http://www.michaelhartl.com/"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      link_news: "http://news.railstutorial.org/"
   static_pages:
     home:
       title: "Home"
@@ -30,5 +46,13 @@ en:
       message_about_html: "The %{hreftutorial} is a %{book} and
       %{screencast} to teach web development with
       %{href}. This is the sample application for the tutorial."
-
-
+    contact:
+      title: "Contact"
+      detail: "contact page"
+      link: "http://www.railstutorial.org/contact"
+      message_contact_html: "Contact the Ruby on Rails Tutorial
+      about the sample app at the %{href}."
+  users:
+    new:
+      title: "Sign up"
+      message_new: "This will be a signup page for new users."
