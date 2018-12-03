@@ -1,4 +1,11 @@
 en:
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Confirmation"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -53,6 +60,17 @@ en:
       message_contact_html: "Contact the Ruby on Rails Tutorial
       about the sample app at the %{href}."
   users:
+    private:
+      not_found: "User not found"
     new:
       title: "Sign up"
-      message_new: "This will be a signup page for new users."
+      detail: "This will be a signup page for new users."
+      confirm: "Confirmation"
+      create: "Create my account"
+    create:
+      success: "Welcome to the Sample App!"
+  shared:
+    form_contain: "The form contains %{error_list}"
+    error:
+      one: "1 error"
+      other: "%{count} errors"
