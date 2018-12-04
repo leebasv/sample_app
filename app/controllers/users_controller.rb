@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = t ".success"
       redirect_to @user
     else
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
       :password_confirmation)
   end
 
-  def get_user
+  def load_user
     @user = User.find_by id: params[:id]
     return if @user
     flash[:warning] = t "users.private.not_found"
