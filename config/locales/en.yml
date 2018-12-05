@@ -6,6 +6,7 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Confirmation"
+        remember_me: "Remember me"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -34,6 +35,7 @@ en:
       title: "Log in"
       sign_up_html: "New user? %{href}"
       sign_up_now: "Sign up now!"
+      remember_me: "Remember me on this computer"
   static_pages:
     home:
       title: "Home"
