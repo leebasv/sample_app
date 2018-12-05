@@ -2,3 +2,5 @@ users:
   email_length: 255
   name_length: 50
   password_length: 6
+sessions:
+  checked: "1"
