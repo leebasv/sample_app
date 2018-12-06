@@ -73,6 +73,10 @@ en:
   users:
     private:
       not_found: "User not found"
+      pls_log_in: "Please log in."
+      user_deleted: "User deleted"
+      profile_updated: "Profile updated"
+      failed: "Error: cannot delete"
     new:
       title: "Sign up"
       detail: "This will be a signup page for new users."
@@ -82,6 +86,17 @@ en:
     create:
       success: "Welcome to the Sample App!"
       invalid: "Invalid email/password combination"
+    edit:
+      change: "change"
+      gravatar_link: "http://gravatar.com/emails"
+      edit: "Edit user"
+      save: "Save changes"
+      update: "Update your profile"
+    index:
+      title: "All users"
+    user:
+      confirm: "You sure?"
+      delete: "delete"
   shared:
     form_contain: "The form contains %{error_list}"
     error:
