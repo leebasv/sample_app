@@ -36,6 +36,9 @@ en:
       sign_up_html: "New user? %{href}"
       sign_up_now: "Sign up now!"
       remember_me: "Remember me on this computer"
+    create:
+      not_activated: "Account not activated. "
+      check_email: "Check your email for the activation link."
   static_pages:
     home:
       title: "Home"
@@ -84,6 +87,7 @@ en:
       create: "Create my account"
       sign_up_now: "Sign up now!"
     create:
+      check_email: "Please check your email to activate your account."
       success: "Welcome to the Sample App!"
       invalid: "Invalid email/password combination"
     edit:
@@ -102,3 +106,19 @@ en:
     error:
       one: "1 error"
       other: "%{count} errors"
+  user_mailer:
+    account_activation:
+      title: "Sample app"
+      greetings: "Hi %{href},"
+      click_down: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+    password_reset:
+      title: "User#password_reset"
+      find_me: "%{href}, find me in app/views/user_mailer/password_reset.html.erb"
+    subject: "Account activation"
+    greeting: "Hi"
+    email: "to@example.org"
+  account_activations:
+    edit:
+      activated: "Account activated!"
+      invalid: "Invalid activation link"
