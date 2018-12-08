@@ -3,6 +3,7 @@ users:
   email_length: 255
   password_length: 6
   page_items_count: 30
+  time_expired: 2
 sessions:
   checked: "1"
 user_helper:
