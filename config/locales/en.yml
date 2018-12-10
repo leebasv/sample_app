@@ -7,6 +7,8 @@ en:
         password: "Password"
         password_confirmation: "Confirmation"
         remember_me: "Remember me"
+      password_reset:
+        email: "Email"
   layouts:
     application:
       base_title: "Ruby on Rails Tutorial Sample App"
@@ -36,9 +38,9 @@ en:
       sign_up_html: "New user? %{href}"
       sign_up_now: "Sign up now!"
       remember_me: "Remember me on this computer"
+      forgot_password: "(forgot password)"
     create:
-      not_activated: "Account not activated. "
-      check_email: "Check your email for the activation link."
+      not_activated: "Account not activated. Check your email for the activation link."
   static_pages:
     home:
       title: "Home"
@@ -113,12 +115,33 @@ en:
       click_down: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
     password_reset:
-      title: "User#password_reset"
-      find_me: "%{href}, find me in app/views/user_mailer/password_reset.html.erb"
+      title: "Password reset"
+      link_preview: "To reset your password click the link below:"
+      link_detail: "Reset password"
+      expire: "This link will expire in two hours."
+      note: "If you did not request your password to be reset,
+      please ignore this email and your password will stay as it is."
     subject: "Account activation"
-    greeting: "Hi"
+    subject2: "Password reset"
     email: "to@example.org"
   account_activations:
     edit:
       activated: "Account activated!"
       invalid: "Invalid activation link"
+  password_resets:
+    new:
+      title: "Forgot password"
+      submit: "Submit"
+    create:
+      info: "Email sent with password reset instructions"
+      not_found: "Email address not found"
+    edit:
+      title: "Reset password"
+      update_password: "Update password"
+      confirmation: "Confirmation"
+    update:
+      empty_invalid: "can't be empty"
+      password_reset: "Password has been reset."
+    private:
+      check_expiration:
+        expired: "Password reset has expired."
