@@ -103,8 +103,16 @@ en:
     user:
       confirm: "You sure?"
       delete: "delete"
+    show:
+      posts: "Microposts %{href}"
   shared:
     form_contain: "The form contains %{error_list}"
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      post: "post"
+    user_info:
+      micropost: "micropost"
+      view_profile: "view my profile"
     error:
       one: "1 error"
       other: "%{count} errors"
@@ -145,3 +153,12 @@ en:
     private:
       check_expiration:
         expired: "Password reset has expired."
+  microposts:
+    micropost:
+      micropost_created: "Micropost created"
+      micropost_deleted: "Micropost deleted"
+      size_error: "should be less than 5MB"
+      failed: "Error. Cannot delete."
+      sure: "You sure?"
+      alert: "Maximum file size is 5MB. Please choose a smaller file"
+      posted: "Posted %{href} ago."

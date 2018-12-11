@@ -1,7 +1,6 @@
 class PasswordResetsController < ApplicationController
-  before_action :get_user,   only: [:edit, :update]
-  before_action :valid_user, only: [:edit, :update]
-  before_action :check_expiration, only: [:edit, :update]
+  before_action :load_user, :valid_user, :check_expiration,
+    only: [:edit, :update]
 
   def new; end
 
@@ -42,7 +41,7 @@ class PasswordResetsController < ApplicationController
   def load_user
     @user = User.find_by email: params[:email]
     return if @user
-    flash[:warning] = t "users.users_controller.not_found"
+    flash[:warning] = t "users.private.not_found"
     redirect_to root_path
   end
 
@@ -52,7 +51,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def check_expiration
-    return unless @user.password_reset_expire?
+    return unless @user.password_reset_expired?
     flash[:danger] = t "password_resets.private.check_expiration.expired"
     redirect_to new_password_reset_path
   end
