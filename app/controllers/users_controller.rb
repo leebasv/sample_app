@@ -9,7 +9,10 @@ class UsersController < ApplicationController
       per_page: Settings.users.page_items_count
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.newest.paginate page: params[:page],
+      per_page: Settings.users.page_items_count
+  end
 
   def new
     @user = User.new
@@ -19,8 +22,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = t "users.create.success"
       redirect_to root_path
+      flash[:info] = t "users.create.check_email"
     else
       render :new
     end
@@ -60,17 +63,13 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t "users.private.pls_log_in"
-    redirect_to login_path
-  end
-
+  # Before filters
+  # Confirms the correct user.
   def correct_user
     redirect_to root_path unless current_user? @user
   end
 
+  # Confirms an admin user.
   def is_admin?
     redirect_to root_path unless current_user.admin?
   end

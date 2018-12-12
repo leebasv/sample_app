@@ -61,4 +61,16 @@ module SessionsHelper
       forget user
     end
   end
+
+  def check_activated user
+    if user.activated?
+      log_in user
+      check_session user
+      redirect_back_or user
+    else
+      message = t "sessions.create.not_activated"
+      flash[:warning] = message
+      redirect_to root_path
+    end
+  end
 end
