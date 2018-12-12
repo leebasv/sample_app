@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :load_user, except: [:index, :new, :create]
   before_action :logged_in_user, except: [:show, :new, :create]
   before_action :correct_user, only: [:edit, :update]
@@ -47,6 +48,18 @@ class UsersController < ApplicationController
     else
       flash[:warning] = t "users.private.failed"
     end
+  end
+
+  def following
+    @title = t "users.private.following_title"
+    @user  = User.find_by id: params[:id]
+    check_for_user @user
+  end
+
+  def followers
+    @title = t "users.private.followers_title"
+    @user  = User.find_by id: params[:id]
+    check_for_user @user
   end
 
   private

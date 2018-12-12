@@ -4,6 +4,7 @@ users:
   password_length: 6
   page_items_count: 30
   time_expired: 2
+  gra_size: 30
 sessions:
   checked: "1"
 user_helper:
