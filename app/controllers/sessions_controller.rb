@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user&.authenticate params[:session][:password]
       check_activated user
     else
-      flash.now[:danger] = t "users.create.invalid"
+      danger_flash
       render :new
     end
   end

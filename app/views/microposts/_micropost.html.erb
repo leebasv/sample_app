@@ -1,4 +1,4 @@
-<li id="micropost-<%= micropost.id %>">
+ <li id="micropost-<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: Settings.micropost.user_count),
     micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
